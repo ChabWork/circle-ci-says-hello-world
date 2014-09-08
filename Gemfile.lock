@@ -1,0 +1,38 @@
+GIT
+  remote: git://github.com/rainforestapp/rainforest-cli.git
+  revision: 5c40566c2d77e7f18937ec060197b7556c4e9937
+  branch: feature/add-ad-hoc-environments
+  specs:
+    rainforest-cli (0.0.13)
+      httparty
+      parallel
+      ruby-progressbar
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    httparty (0.13.1)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
+    json (1.8.1)
+    multi_xml (0.5.5)
+    parallel (1.3.1)
+    puma (2.9.1)
+      rack (>= 1.1, < 2.0)
+    rack (1.5.2)
+    rack-protection (1.5.3)
+      rack
+    ruby-progressbar (1.5.1)
+    sinatra (1.4.5)
+      rack (~> 1.4)
+      rack-protection (~> 1.4)
+      tilt (~> 1.3, >= 1.3.4)
+    tilt (1.4.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  puma
+  rainforest-cli!
+  sinatra

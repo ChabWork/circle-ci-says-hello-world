@@ -1,0 +1,10 @@
+machine:
+  post:
+    - wget https://s3.amazonaws.com/build-tools-prd/ngrok.zip
+    - unzip ngrok.zip
+    - ./ngrok -authtoken $NGROK_TOKEN -log ngrok.log -subdomain=$CIRCLE_SHA1 9292:
+        background: true
+    - cd circle-ci-says-hello-world && bundle install && bundle exec rackup -D -p 9292
+test:
+  override:
+    - bundle exec rainforest run all --site-id $RAINFOREST_SITE_ID --custom-url $CIRCLE_SHA1.ngrok.com --conflict abort --fg --fail-fast --token $RAINFOREST_API_TOKEN
