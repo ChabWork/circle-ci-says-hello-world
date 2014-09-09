@@ -12,8 +12,6 @@ ngrok run in background, with the Circle CI background thingy and the Sinatra is
 
 Once the machine is up (before the test starts), it is reachable by the world.
 
-This is a pretty nasty hack but it works! ::grinning:
-
-## Known flaw
+## Known limitations
 
 - All must be done under 60 minutes (Circle's timeout)
